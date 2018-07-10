@@ -19,7 +19,12 @@ def handler(event, context):
         args.extend(['--config', 'config.yaml'])
 
     print("Using arguments: `%s`" % args)
-    elastalert.main(args)
+    try:
+        elastalert.main(args)
+    except SystemExit as exc:
+        if exc.args[0] == 0:
+            return
+        raise
 
 
 if __name__ == "__main__":
