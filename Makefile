@@ -13,3 +13,4 @@ lambda: clean
 	@pip install --target dist git+https://github.com/beezz/elastalert.git
 	@find dist/ -type f -name "*.py[co]" -exec rm {} +
 	@cd dist && zip -r lambda.zip *
+	@echo "Deployment package is ready ad dist/lambda.zip"
