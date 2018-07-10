@@ -30,6 +30,6 @@ if __name__ == "__main__":
     import sys
     import select
     event = {}
-    if select.select([sys.stdin,],[],[],0.0)[0]:
+    if select.select([sys.stdin,], [], [], 0.0)[0]:
         event = json.loads(sys.stdin.read())
     handler(event, None)
