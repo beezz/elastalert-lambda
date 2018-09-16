@@ -62,9 +62,3 @@ Passing arguments using event:
 ```
 $ echo '{"ARGS": "--debug --patience seconds=5 --es_debug"}' | python elastalert_lambda.py
 ```
-
-## Notes
-
-By default my fork of elastalert is used which removes the stomp alerter which
-is doing localhost names resolution at import time to save milisecongs of paid running
-time. You can change that in `Makefile`.
