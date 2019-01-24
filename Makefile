@@ -13,4 +13,4 @@ lambda: clean
 	@pip install --target dist elastalert
 	@find dist/ -type f -name "*.py[co]" -exec rm {} +
 	@cd dist && zip -r lambda.zip *
-	@echo "Deployment package is ready ad dist/lambda.zip"
+	@echo "Deployment package is ready as dist/lambda.zip"
