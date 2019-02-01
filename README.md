@@ -40,6 +40,15 @@ elastalert with predefined arguments
 You can override those defaults and also add additional arguments using
 environmental variable `ARGS` or as part of sent event, also with `ARGS` key.
 
+Automatic creation of indexes and mappings (``elastalert-create-index``) add
+``EA_CREATE_INDEX`` environmental variable to the lambda function. You can
+control the argument supplied to the index creation using the
+``EA_CREATE_INDEX_ARGS`` environmental variable. If you omit that one, the
+elastalert ``config.yaml`` is supplied via the ``--config`` flag.
+
+Example of create index args setting ``EA_CREATE_INDEX="--host localhost --user user --password pass"``.
+
+
 **Check all supported arguments `elastalert --help`**
 
 
